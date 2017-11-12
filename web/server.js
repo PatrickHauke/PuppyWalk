@@ -11,9 +11,11 @@ var express = require('express'),
 var socketServer = require('./controllers/socketOverExpress');
 var mqttServer = require('./controllers/mqtt_websockets');
 
+app.set('port', process.env.PORT || 3000);
 
 socketServer.createSocketWithAppServer(app);
 
+// app.set('port', process.env.PORT || 3000);
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.engine('ejs', engine);
@@ -21,13 +23,24 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(logger('dev'));
 
+app.use(connectAssets({
+    paths: [
+        path.join(__dirname, 'public/css'),
+        path.join(__dirname, 'public/dev'),
+        path.join(__dirname, 'public/fonts'),
+        path.join(__dirname, 'public/images'),
+        path.join(__dirname, 'public/support'),
+        path.join(__dirname, 'public/js')
+    ]
+}));
+
 app.use(bodyParser.json({limit: "50mb"}));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(cookieParser());
 
-// var routes = require('./routes/routing');
-// app.use('/', routes);
+var routes = require('./routes/routing');
+app.use('/', routes);
 
 mqttServer.connectToSocket();
 

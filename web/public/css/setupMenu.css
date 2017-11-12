@@ -1,0 +1,142 @@
+.register-container {
+  height:100vh;
+  background-color: #f7f7f7;
+}
+
+.flex-container {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100%;
+    min-width: 300px;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.flex-content {
+    background-color: #f7f7f7;
+}
+
+.setup-form {
+    padding: 0;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #bbb;
+}
+
+.setup-information {
+    padding: 1.875em;
+}
+
+.setup-caseId {
+    margin-bottom: 1.875em;
+}
+
+.setup-confirmCaseId {
+    margin-bottom: 1.875em
+}
+
+.setup-deviceId {
+    margin-bottom: 1.875em;
+}
+
+.setup-deviceMediaSelection {
+  margin-bottom: 1.875em;
+}
+
+.setup-container {
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+
+.list-group {
+    min-with: 100%
+}
+
+.logo-title {
+    float: left;
+    margin: 0 auto;
+    padding: 25px;
+    margin-right: 5px;
+    border-bottom: 2px solid #EFEFEF;
+}
+
+#logo_primary {
+    margin: 0 6px;
+}
+
+.material-switch>label {
+    top: 10px;
+    color: #36bba4;
+}
+
+.label-info {
+  background-color:#36bba4;
+}
+
+body {
+    font-family: "lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857;
+    color: #95989A;
+    height: 100%;
+    font-size: 16px;
+    background-color: #fff
+}
+
+#openSession {
+    border-radius:20px;
+    background-color:#FAFAFA;
+    color:#36bba4;
+    border:2px solid #36bba4;
+    font-size: 20px;
+    padding:0px 25px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    display:block;
+    margin:0 auto;
+    margin-bottom: 1.875em;
+}
+
+#openSession:hover {
+    background-color: #36bba4;
+    color:#FAFAFA;
+}
+
+.errors {
+  position:absolute;
+  /*margin:auto;*/
+  max-width:480px;
+  min-width:480px;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+  background: #e79892;
+  padding: 5px;
+  /*margin-right: 40px;*/
+  /*margin-bottom:1px;*/
+  /*min-width: 200px;*/
+  display: inline-block;
+  border: 1px solid #e74c3c;
+}
+
+.error_txt {
+  color:blue;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

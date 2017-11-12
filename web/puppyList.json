@@ -1,0 +1,53 @@
+{
+    "dataset" : "puppy",
+    "dogs" : [
+        {
+            "id": 0,
+            "dog-name": "Mishka",
+            "sex": "F",
+            "desc": "Hyper cute floof",
+            "friends": [
+                {
+                    "F_name" : "Cloudia",
+                    "F_sex" : "F",
+                    "F_desc": "A little shy, but plays nice",
+                    "F_Loc_Lat": 10.1000,
+                    "F_Loc_Lng": 10.1000,
+                    "friendly": true
+                },
+                {
+                    "F_name" : "Charlie",
+                    "F_sex" : "M",
+                    "F_desc": "Jumps a little from being happy to see other dogs",
+                    "F_Loc_Lat": 10.1000,
+                    "F_Loc_Lng": 10.1000,
+                    "friendly": true
+                },
+                {
+                    "F_name" : "Bella",
+                    "F_sex" : "F",
+                    "F_desc": "Starts to bark when ever we meet on walk. Tried to attack.",
+                    "F_Loc_Lat": 10.1000,
+                    "F_Loc_Lng": 10.1000,
+                    "friendly": false
+                },
+                {
+                    "F_name" : "Kiki",
+                    "F_sex" : "F",
+                    "F_desc": "Very friendly. Mishka loves playing with her.",
+                    "F_Loc_Lat": 10.1000,
+                    "F_Loc_Lng": 10.1000,
+                    "friendly": true
+                },
+                {
+                    "F_name" : "Lucky",
+                    "F_sex" : "M",
+                    "F_desc": "Agressive towards Mishka. Almost bit her. ",
+                    "F_Loc_Lat": 10.1000,
+                    "F_Loc_Lng": 10.1000,
+                    "friendly": false
+                }
+            ]
+        }
+    ]
+}
