@@ -28,7 +28,7 @@ textarea {
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 300px;
+    left: 310px;
     width: 0;
     height: 100%;
     margin-left: -300px;
@@ -41,7 +41,7 @@ textarea {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 300px;
+    width: 310px;
 }
 
 #page-content-wrapper {
@@ -665,7 +665,7 @@ button#showStats {
     }
 
     #sidebar-wrapper {
-        width: 300px;
+        width: 320px;
         background-color: #F7F7F7;
     }
 
