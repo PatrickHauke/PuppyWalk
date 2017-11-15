@@ -1,3 +1,7 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
 
 body {
     font-family: 'Palanquin', sans-serif;
@@ -7,7 +11,8 @@ body {
 ul {
     overflow: hidden;
     overflow-y: scroll;
-    height: 165px;
+    /*height: 165px;*/
+    height: 17vh;
 }
 
 p {
