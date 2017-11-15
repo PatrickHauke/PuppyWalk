@@ -1,17 +1,17 @@
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Palanquin', sans-serif;
     background: #fafafa;
 }
 
 ul {
     overflow: hidden;
     overflow-y: scroll;
-    height: 160px;
+    height: 165px;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Palanquin', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -69,7 +69,7 @@ i, span {
     min-width: 380px;
     max-width: 380px;
     background: #f8eee7;
-    color: #fff;
+    color:#f9f9f9;
     transition: all 0.3s;
 }
 
@@ -160,7 +160,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     display: block;
     position: absolute;
     right: 20px;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'Palanquin', sans-serif;;
     font-size: 0.6em;
 }
 a[aria-expanded="true"]::before {
@@ -211,7 +211,7 @@ a.article, a.article:hover {
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     #sidebar {
         min-width: 120px;
         max-width: 120px;
@@ -276,7 +276,12 @@ a.article, a.article:hover {
 
 
 /*BOOTSTRAP OVERRIDE*/
-.panel-body{
+.panel-default>.panel-heading {
+    color: #f9f9f9;
+    font-size: 18px;
+}
+
+.panel-body {
     padding: 0px 0px 0px 5px;
 }
 
@@ -284,4 +289,22 @@ a.article, a.article:hover {
     visibility: hidden;
 }
 
+/*Dog Labels*/
+.puppy-friend {
+    background-color: #93C178!important;
+    /*background-color : #A7B385!important;  <- Maybe?*/
+}
 
+.puppy-potential {
+    background-color: #6EC4DB!important;
+}
+
+.puppy-warning {
+    background-color: #FA6E59!important;
+}
+
+.my-puppy-bio {
+    background-color : #A7B3A5!important;
+    overflow:hidden!important;
+    overflow-y: hidden!important;
+}
