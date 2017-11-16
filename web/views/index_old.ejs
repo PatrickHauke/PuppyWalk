@@ -31,10 +31,8 @@
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
-                            <h4 class="panel-title">
-                                <a id="details-info" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <p class="details-text"><span class="info-ic"></span>Dogs on the Prowel</p><span class="rightarrow-ic pull-right"></span>
-                                </a>
+                            <h4 class="panel-title panel-title-header">
+                                Dogs on the Prowel
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -61,15 +59,20 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
-                                <ul class="details-list">
-                                     <ul class="details-list">
-                                    <li >Dog's Name: <input type="text" value=""></li>
-                                    <li >Sex: <input type="text" value=""></li>
-                                    <li>Rating: <input type="text" value=""> </li>
-                                    <li>Distance From: <input type="text" value=""></li>
-
-                                </ul>
-                                </ul>
+														
+                                
+																	<%doglist.dogs[0].friends.forEach(
+																		(friend) => {
+																			%>
+																				<% if (friend.friendly === true) { %>
+																					<ul class="details-list">
+																						<li><%=friend.F_name%></li>
+																						<li><%=friend.F_sex%></li>
+																						<li><%=friend.F_desc%></li>
+																					</ul>
+																				<% } %>
+																		<% }
+																	)%>
                             </div>
                         </div>
                     </div>
@@ -120,21 +123,25 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                                 <a id="details-info" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <p class="details-text"><span class="info-ic"></span>Took Out</p><span class="rightarrow-ic pull-right"></span>
+                                    <p class="details-text"><span class="info-ic"></span>Look Out</p><span class="rightarrow-ic pull-right"></span>
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
-                                <ul class="details-list">
-                                     <ul class="details-list">
-                                    <li >Dog's Name: <input type="text" value=""></li>
-                                    <li >Sex: <input type="text" value=""></li>
-                                    <li>Rating: <input type="text" value=""> </li>
-                                    <li>Distance From: <input type="text" value=""></li>
-
-                                </ul>
-                                </ul>
+															
+																<%doglist.dogs[0].friends.forEach(
+																	(friend) => {
+																		%>
+																			<% if (friend.friendly === false) { %>
+																				<ul class="details-list">
+																					<li><%=friend.F_name%></li>
+																					<li><%=friend.F_sex%></li>
+																					<li><%=friend.F_desc%></li>
+																				</ul>
+																			<% } %>
+																	<% }
+																)%>
                             </div>
                         </div>
                     </div>
@@ -175,14 +182,6 @@
 
 
         </div>
-        </div>
-
-
-        <div class="sidebar-item">
-            <div class="center">
-                <p>Support &amp; FAQ</p>
-
-            </div>
         </div>
 
     </div>
