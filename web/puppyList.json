@@ -6,7 +6,8 @@
             "dogName": "Mishka",
             "sex": "F",
             "size": "small",
-            "desc": "Hyper cute floof", 
+            "desc": "Hyper cute floof",
+            "totalDistance" : 12, 
             "friends": [
                 {
                     "F_name" : "Cloudia",
