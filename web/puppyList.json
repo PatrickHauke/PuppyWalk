@@ -3,9 +3,10 @@
     "dogs" : [
         {
             "id": 0,
-            "dog-name": "Mishka",
+            "dogName": "Mishka",
             "sex": "F",
-            "desc": "Hyper cute floof",
+            "size": "small",
+            "desc": "Hyper cute floof", 
             "friends": [
                 {
                     "F_name" : "Cloudia",
@@ -46,6 +47,34 @@
                     "F_Loc_Lat": 10.1000,
                     "F_Loc_Lng": 10.1000,
                     "friendly": false
+                }
+            ]
+        }, {
+            "potential": [
+                {
+                    "P_id":42,
+                    "P_name": "Anna",
+                    "P_desc": "Friendly floof",
+                    "P_size": "medium",
+                    "P_sex": "F"
+                }, {
+                    "P_id":128,
+                    "P_name": "Bork",
+                    "P_desc": "Might be a little intimidating, but is gental",
+                    "P_size": "large",
+                    "P_sex": "M"
+                }, {
+                    "P_id":211,
+                    "P_name": "Tina",
+                    "P_desc": "Tends to be a little shy at first",
+                    "P_size": "small",
+                    "P_sex": "F"
+                }, {
+                    "P_id":17,
+                    "P_name": "Alan",
+                    "P_desc": "Is partially blind from accident, but warm hearted.",
+                    "P_size": "large",
+                    "P_sex": "M"
                 }
             ]
         }

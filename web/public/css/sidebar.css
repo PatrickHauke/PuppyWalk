@@ -1,5 +1,5 @@
 html {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100%;
 }
 
@@ -272,6 +272,7 @@ a.article, a.article:hover {
 
 .list-group-item-text {
     padding-bottom : 4px;
+    line-height: 1.7;
 }
 
 .list-group-item-bio {

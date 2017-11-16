@@ -1,5 +1,5 @@
-<nav id = "sidebar">
-    <div class = "sidebar-header">
+<nav id="sidebar">
+    <div class="sidebar-header">
         <h3>Dogs on the Prowel</h3>
         <stong>P.W</stong>
         <!-- strong should have puppy walk logo-->
@@ -13,84 +13,43 @@
             </div>
             <div class="panel-body panel-collapse">
                 <ul class="list-group components" id="puppyFriendsList">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <img src="../../public/img/icon_holder.png" class="img-rounded" width="auto" height="50px">
-                            </div>
-                            <!--<div class="col-sm-1"></div>-->
-                            <div class="col-sm-4">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    <!--{Dogs Sex}-->
-                                    Male
-                                </p>
-                            </div>
-                            <div class="col-sm-3">
-                                <p class="list-group-item-text">
-                                    <!--{dog size}-->
-                                    <img src="../../public/img/dogChart.jpg" class="img-rounded" width="auto" height="50px">
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    <%doglist.dogs[0].friends.forEach(
+                        (friend) => { %>
+                        <% if (friend.friendly === true) { %>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <img src="../../public/img/icon_holder.png" class="img-rounded" width="auto" height="50px">
+                                    </div>
+                                    <!--<div class="col-sm-1"></div>-->
+                                    <div class="col-sm-4">
+                                        <!-- Dog Name -->
+                                        <p class="list-group-item-heading">
+                                            <%=friend.F_name%>
+                                        </p>
+                                        <p class="List-group-item-text">
+                                            <!-- Dogs Sex -->
+                                            <%=friend.F_sex%>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="list-group-item-text">
+                                            <!--{dog size}-->
+                                            <img src="../../public/img/dogChart.jpg" class="img-rounded" width="auto" height="50px">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="list-group-item-bio">
+                                            <%=friend.F_desc%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <% } %>
+                        <% }
+                    )%>
                 </ul>
             </div>
         </div>
@@ -101,78 +60,41 @@
             </div>
             <div class="panel-body panel-collapse">
                 <ul class="list-group components" id="puppyPotentialList">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    <%doglist.dogs[1].potential.forEach(
+                        (potential) => { %>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <img src="../../public/img/icon_holder.png" class="img-rounded" width="auto" height="50px">
+                                    </div>
+                                    <!--<div class="col-sm-1"></div>-->
+                                    <div class="col-sm-4">
+                                        <!-- Dog Name -->
+                                        <p class="list-group-item-heading">
+                                            <%=potential.P_name%>
+                                        </p>
+                                        <p class="List-group-item-text">
+                                            <!-- Dogs Sex -->
+                                            <%=potential.P_sex%>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="list-group-item-text">
+                                            <!--{dog size}-->
+                                            <img src="../../public/img/dogChart.jpg" class="img-rounded" width="auto" height="50px">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="list-group-item-bio">
+                                                <%=potential.P_desc%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        <% }
+                    )%>
                 </ul>
             </div>
         </div>
@@ -184,78 +106,43 @@
             </div>
             <div class="panel-body panel-collapse">
                 <ul class="list-group components" id="puppyWarningsList">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <p class="list-group-item-heading">
-                                    Boop
-                                </p>
-                                <p class="List-group-item-text">
-                                    {Dogs Sex}
-                                </p>
-                            </div>
-                            <div class="col-sm-5">
-                                <p class="list-group-item-text">
-                                    {dog size}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="list-group-item-bio">
-                                    {Puppy Bio!}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    <%doglist.dogs[0].friends.forEach(
+                        (friend) => { %>
+                        <% if (friend.friendly === false) { %>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <img src="../../public/img/icon_holder.png" class="img-rounded" width="auto" height="50px">
+                                    </div>
+                                    <!--<div class="col-sm-1"></div>-->
+                                    <div class="col-sm-4">
+                                        <!-- Dog Name -->
+                                        <p class="list-group-item-heading">
+                                            <%=friend.F_name%>
+                                        </p>
+                                        <p class="List-group-item-text">
+                                            <!-- Dogs Sex -->
+                                            <%=friend.F_sex%>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="list-group-item-text">
+                                            <!--{dog size}-->
+                                            <img src="../../public/img/dogChart.jpg" class="img-rounded" width="auto" height="50px">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="list-group-item-bio">
+                                                <%=friend.F_desc%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <% } %>
+                        <% }
+                    )%>
                 </ul>
             </div>
         </div>
@@ -263,26 +150,30 @@
         <!-- Current dogs bio -->
         <div class="panel panel-default" data-toggle="collapse" aria-expanded="true">
             <div class="panel-heading my-puppy-bio">
-                {Dogs name}'s Bio
+                <%=doglist.dogs[0].dogName%>'s Bio
             </div>
             <div class="panel-body panel-collapse">
                 <ul class="list-group components" id="puppyStatListing">
                     <li class="list-group-item">
-                        <div class = "row">
-                            <div class="col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img src="../../public/img/icon_holder.png" class="img-rounded" width="auto" height="50px">
+                            </div>
+                            <!-- Maybe convert this to be a table? -->
+                            <div class="col-sm-3">
                                 <p class="list-group-item-heading">
-                                    Boop
+                                    <%=doglist.dogs[0].dogName%>
                                 </p>
                                 <p class="List-group-item-text">
-                                    {Dogs Sex}
+                                    Sex: <%=doglist.dogs[0].sex%>
                                 </p>
                             </div>
-                            <div class="col-sm-5">
+                            <div class="col-sm-7">
                                 <p class="list-group-item-text">
-                                    {dog size}
+                                    Size: <%=doglist.dogs[0].size%>
                                 </p>
                                 <p class="list-group-item-text">
-                                    {Distance traveled}
+                                    Distance: <%=doglist.dogs[0].totalDistance%>km
                                 </p>
                             </div>
                         </div>
@@ -290,7 +181,7 @@
                             <div class="col-sm-12">
                                 <p class="list-group-item-bio">
                                     <!--{Puppy Bio!}-->
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma
+                                    <%=doglist.dogs[0].desc%>
                                 </p>
                             </div>
                         </div>
@@ -304,7 +195,7 @@
 </nav>
 
 <div id="content">
-    <button type="button" data-toggle="collapse" href=""#collapseSideBar id="sidebarCollapse" class="btn btn-info navbar-btn">
+    <button type="button" data-toggle="collapse" href="" #collapseSideBar id="sidebarCollapse" class="btn btn-info navbar-btn">
         Toggle
     </button>
 </div>
