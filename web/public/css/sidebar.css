@@ -6,6 +6,7 @@ html {
 body {
     font-family: 'Palanquin', sans-serif;
     background: rgb(34, 60, 146);
+    padding-bottom: 6px;
 }
 
 .ul-scroll {
@@ -73,7 +74,8 @@ i, span {
 #sidebar {
     min-width: 350px;
     max-width: 350px;
-    background: #f8eee7;
+    background: transparent;
+    /* background: #f8eee7; */
     color:#f9f9f9;
     transition: all 0.3s;
 }
@@ -123,8 +125,8 @@ i, span {
 }
 
 #sidebar .sidebar-header {
-    padding: 10px;
-    background: #8C8984;
+    padding: 5px;
+    background: transparent;
 }
 
 #sidebar .sidebar-header strong {
@@ -313,4 +315,8 @@ a.article, a.article:hover {
     background-color : #A7B3A5!important;
     overflow:hidden!important;
     overflow-y: hidden!important;
+}
+
+.sidebar-container {
+    position: absolute;
 }

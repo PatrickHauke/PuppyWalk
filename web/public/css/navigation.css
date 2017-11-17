@@ -67,3 +67,17 @@
   /*fontcolor*/
   .light-grey {color:#000!important;background-color:#E6E9ED!important}
   
+  .puppy-navbar-main {
+    /* background-color: #8C8984; */
+    background-color: transparent;
+    height: 20px;
+  }
+
+.navbar-fixed-top {
+    background-color: rgba(255,255,255,1);
+    transition: background-color .5s ease 0s;
+}
+.navbar-fixed-top.opaque { 
+    background-color: rgba(255,255,255,0);
+    transition: background-color .5s ease 0s;
+}
