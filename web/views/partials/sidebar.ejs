@@ -13,7 +13,7 @@
                 Friends
             </div>
             <div class="panel-body panel-collapse">
-                <ul class="list-group components" id="puppyFriendsList">
+                <ul class="ul-scroll list-group components" id="puppyFriendsList">
                     <%doglist.dogs[0].friends.forEach(
                         (friend) => { %>
                         <% if (friend.friendly === true) { %>
@@ -60,7 +60,7 @@
                 Potential Friends
             </div>
             <div class="panel-body panel-collapse">
-                <ul class="list-group components" id="puppyPotentialList">
+                <ul class="ul-scroll list-group components" id="puppyPotentialList">
                     <%doglist.dogs[1].potential.forEach(
                         (potential) => { %>
                             <li class="list-group-item">
@@ -106,7 +106,7 @@
                 Warnings
             </div>
             <div class="panel-body panel-collapse">
-                <ul class="list-group components" id="puppyWarningsList">
+                <ul class="ul-scroll list-group components" id="puppyWarningsList">
                     <%doglist.dogs[0].friends.forEach(
                         (friend) => { %>
                         <% if (friend.friendly === false) { %>
@@ -154,7 +154,7 @@
                 <%=doglist.dogs[0].dogName%>'s Bio
             </div>
             <div class="panel-body panel-collapse">
-                <ul class="list-group components" id="puppyStatListing">
+                <ul class="ul-scroll list-group components" id="puppyStatListing">
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-sm-2">
@@ -190,13 +190,5 @@
                 </ul>
             </div>
         </div>
-
-
     </div>
 </nav>
-
-<div id="content">
-    <button type="button" data-toggle="collapse" href="" #collapseSideBar id="sidebarCollapse" class="btn btn-info navbar-btn">
-        Toggle
-    </button>
-</div>

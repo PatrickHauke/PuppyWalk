@@ -5,10 +5,10 @@ html {
 
 body {
     font-family: 'Palanquin', sans-serif;
-    background: #fafafa;
+    background: rgb(34, 60, 146);
 }
 
-ul {
+.ul-scroll {
     overflow: hidden;
     overflow-y: scroll;
     /*height: 165px;*/
@@ -38,11 +38,11 @@ a, a:hover, a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
 .navbar-btn {
@@ -71,8 +71,8 @@ i, span {
 }
 
 #sidebar {
-    min-width: 380px;
-    max-width: 380px;
+    min-width: 350px;
+    max-width: 350px;
     background: #f8eee7;
     color:#f9f9f9;
     transition: all 0.3s;
