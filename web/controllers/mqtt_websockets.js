@@ -17,15 +17,16 @@ exports.connectToSocket = ()=> {
         'Verify by running < mosquitto_sub -v -t "#" > through broker.');
         
         mqttMessageToClient(mqttClient, socket);
+        clientMessageToMQTT(mqttClient, socket);
     });
 
 }
 
-// let subList = ['+/DeviceMovement'];
+// let subList = ['+/Child'];
 // let subList = ['+'];
 let subList = [
     'listenTest',
-    'sample'
+    '+/sampleTopic'
 ]
 function mqttMessageToClient(mqttClient, socket){
     console.log("Loaded");
@@ -34,26 +35,32 @@ function mqttMessageToClient(mqttClient, socket){
     });
 
     mqttClient.on('message', (topic, msg)=>{
-        // The message comes in as a buffer
-        console.log(msg.toString());
-        socket.volatile.emit(topic, msg.toString());
+        // The message comes in as a buffer. Needs to be converted back to string
+        console.log("Incoming Data :: " + msg.toString());
+        // socket.volatile.emit(topic, msg.toString());
+        socket.emit('testcoord', msg.toString());
     })
 }
 
 function clientMessageToMQTT(mqttClient, socket){
     let obj = '';
     // Define connections coming from the client. Maybe pass this as part of the obj?
-    socket.on('connect', () =>{
-        server.on('ClientLink', (msg)=>{
+    // It's important to note that the open socket connection is built and made accessible 
+    // from the callback
+    socket.on('connect', (openSocket) =>{
+        openSocket.on('ClientLink', (msg)=>{
             obj = JSON.parse(msg);
-            console.log(obj);
             // obj : {
             //     deviceId : 'id',
             //     topic : 'topic',
             //     params : 'param'
             // }
             // mqttClient.publish(obj.deviceId + '/' +obj.topic, obj.params);
-            mqttClient.publish("listenTest", obj.params);
+            console.log(obj);
+            let {deviceId, topic, params} = obj;
+            console.log(params);
+            // mqttClient.publish("listenTest", msg);
+            mqttClient.publish(deviceId + "/" + topic, JSON.stringify(params));
         })
     })
 }
