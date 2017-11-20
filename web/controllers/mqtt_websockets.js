@@ -4,7 +4,7 @@ const mqtt = require('mqtt'),
 
 const socketOverExpress = require('./socketOverExpress');
 
-const broker = "http://34.210.16.173";
+const broker = "http://broker.hivemq.com:1883";
 
 exports.connectToSocket = ()=> {
     let server = socketOverExpress.server(),
@@ -22,7 +22,11 @@ exports.connectToSocket = ()=> {
 }
 
 // let subList = ['+/DeviceMovement'];
-let subList = ['+'];
+// let subList = ['+'];
+let subList = [
+    'listenTest',
+    'sample'
+]
 function mqttMessageToClient(mqttClient, socket){
     console.log("Loaded");
     subList.forEach(function(topic){
@@ -36,19 +40,20 @@ function mqttMessageToClient(mqttClient, socket){
     })
 }
 
-// function clientMessageToMQTT(mqttClient, socket){
-//     let obj = '';
-//     // Define connections coming from the client. Maybe pass this as part of the obj?
-//     socket.on('connect', () =>{
-//         server.on('ClientLink', (msg)=>{
-//             obj = JSON.parse(msg);
-//             console.log(obj);
-//             // obj : {
-//             //     deviceId : 'id',
-//             //     topic : 'topic',
-//             //     params : 'param'
-//             // }
-//             mqttClient.publish(obj.deviceId + '/' +obj.topic, obj.params);
-//         })
-//     })
-// }
+function clientMessageToMQTT(mqttClient, socket){
+    let obj = '';
+    // Define connections coming from the client. Maybe pass this as part of the obj?
+    socket.on('connect', () =>{
+        server.on('ClientLink', (msg)=>{
+            obj = JSON.parse(msg);
+            console.log(obj);
+            // obj : {
+            //     deviceId : 'id',
+            //     topic : 'topic',
+            //     params : 'param'
+            // }
+            // mqttClient.publish(obj.deviceId + '/' +obj.topic, obj.params);
+            mqttClient.publish("listenTest", obj.params);
+        })
+    })
+}

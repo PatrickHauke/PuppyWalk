@@ -15,8 +15,6 @@ app.set('port', process.env.PORT || 3000);
 
 socketServer.createSocketWithAppServer(app);
 
-// app.set('port', process.env.PORT || 3000);
-
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.engine('ejs', engine);
 app.set('views', path.join(__dirname, 'views'));
