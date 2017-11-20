@@ -22,3 +22,27 @@
 </script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/public/js/socketConn.js"></script>
+
+<!-- Google maps API -->
+<script>
+    function initMap(){
+        let setStart = {
+            lat: 40.701529,
+            lng: -73.986783
+        };
+
+        let map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 18,
+            center: setStart
+        });
+
+        let marker = new google.maps.Marker({
+            position: setStart,
+            map: map
+        });
+    }
+</script>
+<!-- After the API loads, execute initMap() found in map.js -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBof0W5f3O7IfCoiu0jIHbTG_nyXo8eVJk&callback=initMap">
+</script>
