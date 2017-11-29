@@ -1,0 +1,39 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script type="text/javascript">
+
+	
+</script> -->
+
+<script src="mapping.js" "></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBof0W5f3O7IfCoiu0jIHbTG_nyXo8eVJk&callback=initMap" async defer></script>
+
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+      	margin-bottom: 1rem;
+      }
+    </style>
+
+<head>
+	<title>Google Maps Example</title>
+</head>
+<body>
+    <div id="polyinfo" >
+    	<!-- <h3>Parks you care about</h3>
+    	<ul id="parksList"></ul> -->
+
+    	<input type="button" name="parksBtn" id="parksBtn" value="Parks">
+    </div>
+    <div id="map" /> 
+</body>
