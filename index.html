@@ -2,8 +2,7 @@
 
 <head>
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -23,17 +22,17 @@
                     <a class="mdl-navigation__link" href="#">
                         <!-- Right aligned menu below button -->
                         <!-- <div class="user-menu-nav" id="user-menu-navigation">  -->
-                            <span>User Name</span>
-                            <button id="user-menu-navigation" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
-                                <i class="material-icons">more_vert</i>
-                            </button>
-                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu-navigation">
-                                <li class="mdl-menu__item">My Walks</li>
-                                <li class="mdl-menu__item">Known Dogs</li>
-                                <li class="mdl-menu__item">Manage My Dogs</li>
-                                <li class="mdl-menu__item">Settings</li>
-                                <li class="mdl-menu__item">Help</li>
-                            </ul>
+                        <span>User Name</span>
+                        <button id="user-menu-navigation" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                            <i class="material-icons">more_vert</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu-navigation">
+                            <li class="mdl-menu__item">My Walks</li>
+                            <li class="mdl-menu__item">Known Dogs</li>
+                            <li class="mdl-menu__item">Manage My Dogs</li>
+                            <li class="mdl-menu__item">Settings</li>
+                            <li class="mdl-menu__item">Help</li>
+                        </ul>
                         <!-- </div> -->
                     </a>
                 </nav>
@@ -49,8 +48,7 @@
             <!-- Have to figure out more of the mobile app ui -->
             <div class="user-info-icon-bg material-1dp">
                 <div class="user-info-center user-icon-compress">
-                    <div  class="ratio img-responsive img-circle material-2dp" 
-                        style="background-image: url(https://raw.githubusercontent.com/google/material-design-lite/mdl-1.x/docs/_assets/demos/dog.png);">
+                    <div class="ratio img-responsive img-circle material-2dp" style="background-image: url(https://raw.githubusercontent.com/google/material-design-lite/mdl-1.x/docs/_assets/demos/dog.png);">
                     </div>
                 </div>
             </div>
@@ -72,7 +70,72 @@
             <div class="mdl-grid">
                 <div class="mdl-layout-spacer"></div>
                 <div class="mdl-cell mdl-cell--3-col-phone mdl-cell--7-col-tablet mdl-cell--10-col-desktop">
-                    Content goes here!
+
+                    <!-- Going to have to fix the styling to maintain material structure of UI -->
+                    <div class="my-walks-listing-heading">
+                        <!-- &nbsp is non-breaking space -->
+                        <h1>&nbsp;My Walks &nbsp;</h1>
+                    </div>
+                    <table class="mdl-data-table mdl-js-data-table material-2dp my-walks-listing-main">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric"></th>
+                                <th class="mdl-data-table__cell--non-numeric">Date</th>
+                                <th class="mdl-data-table__cell--non-numeric">Dog Name</th>
+                                <th class="mdl-data-table__cell--non-numeric">Distance</th>
+                                <!-- <th class="mdl-data-table__cell- -->
+                                <!-- -non-numeric"></th> -->
+                                <th class="mdl-data-table__cell--non-numeric">Friends Met</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sample Block to render dynamically -->
+                            <tr data-toggle="collapse" data-target="#row">
+                                <td class="mdl-data-table__cell--non-numeric"></td>
+                                <td class="mdl-data-table__cell--non-numeric">03-Jan-2018</td>
+                                <td class="mdl-data-table__cell--non-numeric">Lucky</td>
+                                <td class="mdl-data-table__cell--non-numeric">2.1km</td>
+                                <td class="mdl-data-table__cell--non-numeric">2</td>
+                            </tr>
+                            <!--  -->
+                            <tr id="row" class="collapse">
+                                <!-- Animations broken. Need to figure out heading and simple information row to be independed from what builds below it. Card maybe? -->
+                                <td >
+                                    <div>Sample</div>
+                                </td>
+                            </tr>
+                            <!-- End sample render block -->
+
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"></td>
+                                <td class="mdl-data-table__cell--non-numeric">03-Jan-2018</td>
+                                <td class="mdl-data-table__cell--non-numeric">Mishka</td>
+                                <td class="mdl-data-table__cell--non-numeric">1.4km</td>
+                                <td class="mdl-data-table__cell--non-numeric">1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"></td>
+                                <td class="mdl-data-table__cell--non-numeric">27-Dec-2017</td>
+                                <td class="mdl-data-table__cell--non-numeric">Mishka</td>
+                                <td class="mdl-data-table__cell--non-numeric">0.8km</td>
+                                <td class="mdl-data-table__cell--non-numeric">0</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"></td>
+                                <td class="mdl-data-table__cell--non-numeric">29-Dec-2017</td>
+                                <td class="mdl-data-table__cell--non-numeric">Lucky</td>
+                                <td class="mdl-data-table__cell--non-numeric">1.6km</td>
+                                <td class="mdl-data-table__cell--non-numeric">1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"></td>
+                                <td class="mdl-data-table__cell--non-numeric">28-Dec-2017</td>
+                                <td class="mdl-data-table__cell--non-numeric">Lucky</td>
+                                <td class="mdl-data-table__cell--non-numeric">2.3km</td>
+                                <td class="mdl-data-table__cell--non-numeric">2</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="mdl-layout-spacer"></div>
             </div>
@@ -80,10 +143,9 @@
     </div>
 
 
-    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
-    <script src="js/navigation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 </body>
 
 </html>

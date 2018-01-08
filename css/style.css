@@ -1,7 +1,8 @@
 span {
   font-family: 'Roboto', sans-serif !important;
   /* font-family: 'Open Sans', sans-serif; */
-  color: #000a12 !important;
+  /* color: #346285 !important; */
+  color: white !important;
 }
 
 a {
@@ -13,7 +14,8 @@ a {
 .nav-primary {
   /* background-color: #ffd54f; */
   /* background-color: #d7ccc8; */
-  background-color: #C9FFE8;
+  /* background-color: #C9FFE8; */
+  background-color: lightblue;
 }
 
 .material-icons{
@@ -34,7 +36,8 @@ a {
 
 /* Mobile side bar */
 .mdl-navigation__link:hover {
-  background-color: #C3C7F3 !important;
+  /* background-color: #C3C7F3 !important; */
+  background-color: #eba487 !important;
 }
 
 .user-info-icon-bg {
@@ -100,13 +103,61 @@ a {
 /* Sample for mdl-layout-spacer */
 .mdl-cell {
   box-sizing: border-box;
-  background-color: #BDBDBD;
-  height: 200px;
-  padding-left: 8px;
-  padding-top: 4px;
+  /* background-color: #BDBDBD; */
+  /* height: 200px; */
+  height:auto;
+  /* padding-right:2px;
+  padding-left: 2px;
+  padding-top: 4px; */
   color: white;
 }
 /* End Sample */
+
+/* My Walks Layout */
+
+/* @import "compass/css3"; */
+
+/* @import url("https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css"); */
+/* @import url("https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css"); */
+
+.my-walks-listing-heading {
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  /* padding: 20px 0; */
+  position: relative;
+}
+
+.my-walks-listing-heading::before,
+.my-walks-listing-heading::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: lightblue;
+  display: block;
+  left: 0;
+  position: absolute
+}
+
+.my-walks-listing-heading::before {
+  top: -6px;
+}
+
+.my-walks-listing-heading::after {
+  bottom: -6px;
+}
+
+.my-walks-listing-main {
+  width: 100%;
+  /* height: auto; */
+}
+
+.my-walks-listing-more-info {
+  padding: 0 !important;
+}
+
+
+/* End My Walks Layout */
 
 /* Material design object shadows */
 
