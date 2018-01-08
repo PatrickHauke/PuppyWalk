@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header nav-primary">
+            <!-- <div class="mdl-layout-icon"></div> -->
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">Puppy Walk</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#">
+                        <!-- Right aligned menu below button -->
+                        <!-- <div class="user-menu-nav" id="user-menu-navigation">  -->
+                            <span>User Name</span>
+                            <button id="user-menu-navigation" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                                <i class="material-icons">more_vert</i>
+                            </button>
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu-navigation">
+                                <li class="mdl-menu__item">My Walks</li>
+                                <li class="mdl-menu__item">Known Dogs</li>
+                                <li class="mdl-menu__item">Manage My Dogs</li>
+                                <li class="mdl-menu__item">Settings</li>
+                                <li class="mdl-menu__item">Help</li>
+                            </ul>
+                        <!-- </div> -->
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <!-- Styling should switch the behavior so that this nav bar (the title) lives on top -->
+        <!-- <header class="mdl-layout__header nav-primary">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">Puppy Walk</span>
+            </div>
+        </header> -->
+        <div class="mdl-layout__drawer material-16dp">
+            <!-- Have to figure out more of the mobile app ui -->
+            <div class="user-info-icon-bg material-1dp">
+                <div class="user-info-center user-icon-compress">
+                    <div  class="ratio img-responsive img-circle material-2dp" 
+                        style="background-image: url(https://raw.githubusercontent.com/google/material-design-lite/mdl-1.x/docs/_assets/demos/dog.png);">
+                    </div>
+                </div>
+            </div>
+            <div class="user-info-name-bg material-1dp">
+                <p class="mdl-layout__title user-info-center">
+                    User Name
+                </p>
+            </div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#">My Walks</a>
+                <a class="mdl-navigation__link" href="#">Known Dogs</a>
+                <a class="mdl-navigation__link" href="#">Manage My Dogs</a>
+                <a class="mdl-navigation__link" href="#">Settings</a>
+                <a class="mdl-navigation__link" href="#">Help</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <!-- Desktop had 12col, tablet 8col, phone 4col -->
+            <div class="mdl-grid">
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--3-col-phone mdl-cell--7-col-tablet mdl-cell--10-col-desktop">
+                    Content goes here!
+                </div>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+    <script src="js/navigation.js"></script>
+</body>
+
+</html>
